@@ -3,7 +3,7 @@ async function fetchScratchData() {
     const url = `https://api.scratch.mit.edu/projects/${projectId}`;
 
     try {
-        const response = await fetch(url);
+        const response = await fetch(url, { mode : 'no-cors'});
         if (!response.ok) {
             throw new Error("データの取得に失敗しました");
         }
